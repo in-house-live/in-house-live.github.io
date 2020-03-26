@@ -107,6 +107,9 @@
 			// Vars.
 				var $form = document.querySelectorAll('#signup-form')[0],
 					$submit = document.querySelectorAll('#signup-form input[type="submit"]')[0],
+					$checkbox = document.querySelectorAll('#signup-form input[type="checkbox"]')[0],
+					$email = document.querySelectorAll('#signup-form input[name="email"]')[0],
+					$name = document.querySelectorAll('#signup-form input[name="name"]')[0],
 					$message;
 
 			// Bail if addEventListener isn't supported.
@@ -153,7 +156,7 @@
 						window.setTimeout(function() {
 
 							console.log("Here!!!!!!!!!")
-							console.log($form)
+							console.log($checkbox.value, $email.value, $name.value)
 
 							// Reset form.
 								$form.reset();
