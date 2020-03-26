@@ -152,6 +152,9 @@
 					// but there's enough here to piece together a working AJAX submission call that does.
 						window.setTimeout(function() {
 
+							console.log("Here!!!!!!!!!")
+							console.log($form)
+
 							// Reset form.
 								$form.reset();
 

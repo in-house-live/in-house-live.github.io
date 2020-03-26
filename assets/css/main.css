@@ -278,7 +278,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   color: #fff;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1em;
   margin: 0 0 1em 0; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -287,7 +287,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.5em;
-  line-height: 1.25em;
+  line-height: 1em;
   font-family: Verdana;
 }
 
@@ -643,10 +643,11 @@ input[type="radio"] {
   -ms-appearance: none;
   appearance: none;
   display: block;
-  float: left;
-  margin-right: -2em;
+  float: center;
+  margin-right: -1em;
+  padding-top: -1.5em;
   opacity: 0;
-  width: 1em;
+  width: 3em;
   z-index: -1; }
   input[type="checkbox"] + label,
   input[type="radio"] + label {
@@ -656,8 +657,9 @@ input[type="radio"] {
     display: inline-block;
     font-size: 1em;
     font-weight: 400;
-    padding-left: 2.4em;
+    padding-left: 2em;
     padding-right: 0.75em;
+    padding-top: 0.3em;
     position: relative; }
     input[type="checkbox"] + label:before,
     input[type="radio"] + label:before {
@@ -670,7 +672,7 @@ input[type="radio"] {
       line-height: 1;
       text-transform: none !important;
       font-family: 'Font Awesome 5 Free';
-      font-weight: 900; }
+      font-weight: 700; }
     input[type="checkbox"] + label:before,
     input[type="radio"] + label:before {
       background: rgba(255, 255, 255, 0.125);
@@ -684,7 +686,7 @@ input[type="radio"] {
       line-height: 1.65em;
       position: absolute;
       text-align: center;
-      top: 0;
+      top: 0.5;
       width: 1.65em; }
   input[type="checkbox"]:checked + label:before,
   input[type="radio"]:checked + label:before {
@@ -698,7 +700,7 @@ input[type="radio"] {
     box-shadow: 0 0 0 2px #1cb495; }
 
 input[type="checkbox"] + label:before {
-  border-radius: 6px; }
+  border-radius: 5px; }
 
 input[type="radio"] + label:before {
   border-radius: 100%; }
@@ -809,6 +811,12 @@ button,
   display: -ms-flex;
   display: flex;
   position: relative; }
+  #signup-form input[type="text"] {
+    margin-bottom: 1em;
+  }
+  #signup-form input[type="submit"] {
+    margin-top: 0.4em;
+  }
   #signup-form input[type="text"],
   #signup-form input[type="password"],
   #signup-form input[type="email"] {
