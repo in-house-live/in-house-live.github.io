@@ -121,7 +121,12 @@ body {
       padding: 5em 2em 2em 2em; } }
   @media screen and (max-width: 360px) {
     body {
-      padding: 5em 1.25em 1.25em 1.25em; } }
+      padding: 5em 1.25em 2em 1.25em;
+    }
+    body p {
+      padding: 2em 2em;
+    }
+  }
 
 /* BG */
 #bg {
@@ -831,13 +836,10 @@ button,
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-    }
-      #signup-form input[type="submit"]{
-        width: 19em;
-      }
-      #signup-form div {
         display:inline-block;
-      }
+    }
+      #signup-form input[type="checkbox"],
+      #signup-form input[type="submit"],
       #signup-form input[type="text"],
       #signup-form input[type="password"],
       #signup-form input[type="email"] {
