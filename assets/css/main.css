@@ -830,11 +830,19 @@ button,
       -moz-flex-direction: column;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
-      flex-direction: column; }
-      #signup-form input[type="type"],
+      flex-direction: column;
+    }
+      #signup-form input[type="submit"]{
+        width: 19em;
+      }
+      #signup-form div {
+        display:inline-block;
+      }
+      #signup-form input[type="text"],
       #signup-form input[type="password"],
       #signup-form input[type="email"] {
-        width: 100%; }
+        width: 100%;
+      }
       #signup-form > * {
         margin: 1.25em 0 0 0; }
       #signup-form .message {
@@ -844,7 +852,9 @@ button,
         left: 0;
         line-height: inherit;
         margin-top: 0;
-        position: absolute; } }
+        position: absolute;
+      }
+    }
 
 /* Footer */
 #footer {
@@ -858,7 +868,8 @@ button,
   opacity: 0.5;
   position: absolute; }
   #footer .icons {
-    margin: 0 0 0.5em 0; }
+    margin: 0.5em 0 0.5em 0;
+  }
   #footer .copyright {
     font-size: 0.8em;
     list-style: none;
