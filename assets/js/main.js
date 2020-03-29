@@ -112,6 +112,23 @@
 					$name = document.querySelectorAll('#signup-form input[name="name"]')[0],
 					$message;
 
+			async function postData(url = '', data = {}) {
+				// Default options are marked with *
+
+				const response = await fetch(url, {
+					method: 'POST',
+					mode: 'cors',
+					cache: 'no-cache',
+					headers: {
+				    'Content-Type': 'application/x-www-form-urlencoded'
+					},
+					body: JSON.stringify(data) // body data type must match "Content-Type" header
+				});
+				return await response.json(); // parses JSON response into native JavaScript objects
+			};
+			// 'Content-Type': 'application/json'
+			// 'Content-Type': 'application/x-www-form-urlencoded'
+			// credentials: 'same-origin', // include, *same-origin, omit -> store cookies
 			// Bail if addEventListener isn't supported.
 				if (!('addEventListener' in $form))
 					return;
@@ -141,6 +158,7 @@
 			// Note: If you're *not* using AJAX, get rid of this event listener.
 				$form.addEventListener('submit', function(event) {
 
+
 					event.stopPropagation();
 					event.preventDefault();
 
@@ -155,18 +173,30 @@
 					// but there's enough here to piece together a working AJAX submission call that does.
 						window.setTimeout(function() {
 
-							console.log("Here!!!!!!!!!")
-							console.log($checkbox.value, $email.value, $name.value)
+							const newSignup = {
+								"dj": $checkbox.value,
+								"email": $email.value,
+								"name": $name.value
+							}
+
+							if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))){
+	 						 $message._show('failure', "Please enter a valid email address.")
+						 } else {
+							 postData("https://4kvaqocb64.execute-api.us-east-1.amazonaws.com/default/inhouselive-stack-1-RDSAuroraServerlessDataAPIFunc-17SPWA1LCO3VI", newSignup)
+ 							  .then((data) => {
+ 							    console.log(data); // JSON data parsed by `response.json()` call
+ 							  }).catch((err) => {
+ 									console.log("Error: ", err)
+ 									//$message._show('failure', err);
+ 								});
+ 							$message._show('success', 'Thanks! Count on an email when our beta is released!');
+						 }
 
 							// Reset form.
-								$form.reset();
+							$form.reset();
 
 							// Enable submit.
-								$submit.disabled = false;
-
-							// Show message.
-								$message._show('success', 'Thank you!');
-								//$message._show('failure', 'Something went wrong. Please try again.');
+							$submit.disabled = false;
 
 						}, 750);
 
