@@ -146,7 +146,7 @@
 
 					window.setTimeout(function() {
 						$message._hide();
-					}, 3000);
+					}, 6000);
 
 				};
 
