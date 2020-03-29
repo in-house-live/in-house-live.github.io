@@ -174,7 +174,7 @@
 						window.setTimeout(function() {
 
 							const newSignup = {
-								"dj": $checkbox.value,
+								"dj": $checkbox.checked ? "on" : "off",
 								"email": $email.value,
 								"name": $name.value
 							}
