@@ -138,19 +138,19 @@
 					$message.classList.add('message');
 					$form.appendChild($message);
 
-				$message._show = function(type, text) {
+				$message._show = (type, text) => {
 
 					$message.innerHTML = text;
 					$message.classList.add(type);
 					$message.classList.add('visible');
 
-					window.setTimeout(function() {
+					window.setTimeout(() => {
 						$message._hide();
 					}, 6000);
 
 				};
 
-				$message._hide = function() {
+				$message._hide = () => {
 					$message.classList.remove('visible');
 				};
 
@@ -185,13 +185,9 @@
 	 							  .then((data) => {
 	 							    console.log(data); // JSON data parsed by `response.json()` call
 	 									$message._show('success', 'Thanks! Count on an email when our beta is released!');
-										$form.reset();
-										$submit.disabled = false;
 	 							  }).catch((err) => {
 	 									console.log("Error: ", err)
 	 									$message._show('failure', "Sorry, we're having an issue at the moment");
-										$form.reset();
-										$submit.disabled = false;
 	 								});
 
 							} else{
