@@ -189,7 +189,8 @@
 	 									//$message._show('failure', err);
 	 								});
 	 							$message._show('success', 'Thanks! Count on an email when our beta is released!');
-		 						// $message._show('failure', "Please enter a valid email address.")
+							} else{
+								$message._show('failure', "Please enter a valid email address.")
 							}
 							// Reset form.
 							$form.reset();
