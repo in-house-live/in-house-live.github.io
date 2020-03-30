@@ -179,16 +179,18 @@
 								"name": $name.value
 							}
 
-							// if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($email.value))){
-							 postData("https://4kvaqocb64.execute-api.us-east-1.amazonaws.com/default/inhouselive-stack-1-RDSAuroraServerlessDataAPIFunc-17SPWA1LCO3VI", newSignup)
- 							  .then((data) => {
- 							    console.log(data); // JSON data parsed by `response.json()` call
- 							  }).catch((err) => {
- 									console.log("Error: ", err)
- 									//$message._show('failure', err);
- 								});
- 							$message._show('success', 'Thanks! Count on an email when our beta is released!');
-	 						// $message._show('failure', "Please enter a valid email address.")
+							const validEmail = $email.value && (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($email.value))
+							if (validEmail){
+								 postData("https://4kvaqocb64.execute-api.us-east-1.amazonaws.com/default/inhouselive-stack-1-RDSAuroraServerlessDataAPIFunc-17SPWA1LCO3VI", newSignup)
+	 							  .then((data) => {
+	 							    console.log(data); // JSON data parsed by `response.json()` call
+	 							  }).catch((err) => {
+	 									console.log("Error: ", err)
+	 									//$message._show('failure', err);
+	 								});
+	 							$message._show('success', 'Thanks! Count on an email when our beta is released!');
+		 						// $message._show('failure', "Please enter a valid email address.")
+							}
 							// Reset form.
 							$form.reset();
 
