@@ -78,9 +78,6 @@ body {
   html, body {
     min-width: 320px;
     }
-    body {
-      margin: 0 0 0 2em
-    }
   }
 
 html {
@@ -887,7 +884,7 @@ button,
   opacity: 0.5;
   position: absolute; }
   #footer .icons {
-    margin: 0.5em 0 0.5em 0;
+    margin: 2em 0 0.5em 0;
   }
   #footer .copyright {
     font-size: 0.8em;
