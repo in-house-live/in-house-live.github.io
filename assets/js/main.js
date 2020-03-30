@@ -184,11 +184,12 @@
 								 postData("https://4kvaqocb64.execute-api.us-east-1.amazonaws.com/default/inhouselive-stack-1-RDSAuroraServerlessDataAPIFunc-17SPWA1LCO3VI", newSignup)
 	 							  .then((data) => {
 	 							    console.log(data); // JSON data parsed by `response.json()` call
+	 									$message._show('success', 'Thanks! Count on an email when our beta is released!');
 	 							  }).catch((err) => {
 	 									console.log("Error: ", err)
 	 									//$message._show('failure', err);
 	 								});
-	 							$message._show('success', 'Thanks! Count on an email when our beta is released!');
+
 							} else{
 								$message._show('failure', "Please enter a valid email address.")
 							}
