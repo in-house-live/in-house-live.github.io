@@ -145,13 +145,14 @@
 					$message.classList.add('visible');
 
 					window.setTimeout(() => {
-						$message._hide();
+						$message._hide(type);
 					}, 6000);
 
 				};
 
-				$message._hide = () => {
+				$message._hide = (type) => {
 					$message.classList.remove('visible');
+					$message.classList.remove(type);
 				};
 
 			// Events.
