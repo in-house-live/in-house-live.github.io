@@ -41,6 +41,11 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1; }
 
+body p {
+  font-size: 13pt !important;
+  max-width: 480px;
+}
+
 ol, ul {
   list-style: none; }
 
@@ -137,7 +142,9 @@ body {
       padding: 5em 1.25em 2em 1.25em;
     }
     body p {
-      padding: 2em 2em;
+      font-size: 0.8em;
+      padding: 2em 0;
+      width: 100%;
     }
   }
 
@@ -354,7 +361,7 @@ sub {
 
 sup {
   font-size: 0.5em;
-  padding: 0 0 4em 1.5em;
+  padding: 0 0 4em 0.5em;
 }
 
 blockquote {
@@ -397,7 +404,7 @@ section.special, article.special {
 header p {
   color: rgba(255, 255, 255, 0.5);
   position: relative;
-  margin: 0 0 1.5em 0; }
+  margin: 1em 0 1.5em 0; }
 
 header h2 + p {
   font-size: 1.25em;
@@ -837,8 +844,12 @@ button,
     font-size: 1em; } }
 
 @media screen and (max-width: 480px) {
-  #header {
-    margin: 0 0 1em 0; } }
+  #header p {
+    font-size: 0.8em;
+    width: 100%;
+    padding: 1em 0 !important;
+  }
+}
 
 /* Signup Form */
 #signup-form {
@@ -882,13 +893,13 @@ button,
       #signup-form > * {
         margin: 1.25em 0 0 0; }
       #signup-form .message {
-        bottom: -1.5em;
-        font-size: 0.9em;
+        font-size: 0.8em;
         height: 1em;
-        left: 0;
+        margin-left: 0.3em;
         line-height: inherit;
-        margin-top: 0;
-        position: absolute;
+        position:fixed;
+        top:0;
+        width:100%;
       }
     }
 
