@@ -41,7 +41,8 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1; }
 
-body p {
+.description {
+  font-size: 13pt !important;
   max-width: 480px;
 }
 
@@ -141,7 +142,6 @@ body {
       padding: 5em 1.25em 2em 1.25em;
     }
     body p {
-      font-size: 0.8em;
       padding: 2em 0;
       width: 100%;
     }
@@ -861,7 +861,7 @@ button,
     margin-bottom: 1em;
   }
   #signup-form input[type="submit"] {
-    margin-top: 0.4em;
+    margin-top: 0.5em;
   }
   #signup-form input[type="text"],
   #signup-form input[type="password"],
