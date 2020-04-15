@@ -943,7 +943,9 @@ button,
   @media screen and (max-width: 736px) {
     #footer {
       bottom: 2em;
-      left: 2em; } }
+      left: 2em;
+      display: none;
+      } }
   @media screen and (max-width: 360px) {
     #footer {
       display: none;
@@ -954,4 +956,6 @@ button,
       bottom: auto;
       left: auto;
       margin: 1em 0 0 0;
-      position: relative; } }
+      position: relative;
+      display: none;
+      } }

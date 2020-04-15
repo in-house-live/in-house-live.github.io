@@ -157,8 +157,8 @@
 
 				$form.addEventListener('checkbox', function(event) {
 					event.stopPropagation();
-					event.preventDefault();					
-				}
+					event.preventDefault();
+				})
 
 			// Events.
 			// Note: If you're *not* using AJAX, get rid of this event listener.
