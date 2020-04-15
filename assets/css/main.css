@@ -946,11 +946,12 @@ button,
       left: 2em; } }
   @media screen and (max-width: 360px) {
     #footer {
-      bottom: 0;
-      left: 1.25em; } }
+      display: none;
+    }
+  }
   @media screen and (max-height: 640px) {
     #footer {
-      bottom: 0;
+      bottom: auto;
       left: auto;
       margin: 1em 0 0 0;
       position: relative; } }
