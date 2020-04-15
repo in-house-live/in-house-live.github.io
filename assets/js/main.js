@@ -155,6 +155,11 @@
 					$message.classList.remove(type);
 				};
 
+				$form.addEventListener('checkbox', function(event) {
+					event.stopPropagation();
+					event.preventDefault();					
+				}
+
 			// Events.
 			// Note: If you're *not* using AJAX, get rid of this event listener.
 				$form.addEventListener('submit', function(event) {
